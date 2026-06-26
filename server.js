@@ -21,7 +21,6 @@ app.post('/send-verification', async (req, res) => {
     return res.status(400).json({ error: 'Email is required' });
   }
 
-  // Build verification link (you can customize this)
   const verificationLink = `https://meetup-1248a.web.app/verify?email=${encodeURIComponent(email)}`;
 
   const data = {
